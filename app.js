@@ -97,16 +97,22 @@ function formatNumber(value) {
   return Number.parseFloat(value.toFixed(3)).toString();
 }
 
+function parseNumericInput(value) {
+  const normalized = value.trim().replace("−", "-");
+  if (normalized === "") return Number.NaN;
+  return Number(normalized);
+}
+
 function getMatrixFromInputs() {
   const nextMatrix = [
-    Number.parseFloat(elements.matrix.a.value),
-    Number.parseFloat(elements.matrix.b.value),
-    Number.parseFloat(elements.matrix.c.value),
-    Number.parseFloat(elements.matrix.d.value),
+    parseNumericInput(elements.matrix.a.value),
+    parseNumericInput(elements.matrix.b.value),
+    parseNumericInput(elements.matrix.c.value),
+    parseNumericInput(elements.matrix.d.value),
   ];
 
   if (nextMatrix.some((value) => !Number.isFinite(value))) {
-    setStatus("Enter valid numeric values for all four matrix cells", true);
+    setStatus("Enter valid numeric values for all four matrix cells.", true);
     return null;
   }
 
@@ -376,8 +382,8 @@ function render() {
 
 function handlePointSubmit(event) {
   event.preventDefault();
-  const x = Number.parseFloat(elements.pointX.value);
-  const y = Number.parseFloat(elements.pointY.value);
+  const x = parseNumericInput(elements.pointX.value);
+  const y = parseNumericInput(elements.pointY.value);
 
   if (!Number.isFinite(x) || !Number.isFinite(y)) {
     setStatus("Enter valid numeric x and y coordinates before adding a point.", true);

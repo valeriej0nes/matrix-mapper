@@ -75,12 +75,12 @@
 
           <form id="pointForm" class="point-form" novalidate>
             <div>
-              <label for="pointX"> x-coordinate</label>
-              <input id="pointX" type="number" step="0.1" inputmode="decimal" placeholder="2" />
+              <label for="pointX">x-coordinate</label>
+              <input id="pointX" type="text" inputmode="text" autocomplete="off" placeholder="-2" />
             </div>
             <div>
-              <label for="pointY"> y-coordinate</label>
-              <input id="pointY" type="number" step="0.1" inputmode="decimal" placeholder="1" />
+              <label for="pointY">y-coordinate</label>
+              <input id="pointY" type="text" inputmode="text" autocomplete="off" placeholder="1" />
             </div>
             <button type="submit">Add Point</button>
           </form>
@@ -116,28 +116,28 @@
             <span class="matrix-bracket" aria-hidden="true">[</span>
             <label>
               <span>a</span>
-              <input id="matrixA" type="number" step="0.1" inputmode="decimal" aria-label="Matrix value a" />
+              <input id="matrixA" type="text" inputmode="text" autocomplete="off" aria-label="Matrix value a" />
             </label>
             <label>
               <span>b</span>
-              <input id="matrixB" type="number" step="0.1" inputmode="decimal" aria-label="Matrix value b" />
+              <input id="matrixB" type="text" inputmode="text" autocomplete="off" aria-label="Matrix value b" />
             </label>
             <label>
               <span>c</span>
-              <input id="matrixC" type="number" step="0.1" inputmode="decimal" aria-label="Matrix value c" />
+              <input id="matrixC" type="text" inputmode="text" autocomplete="off" aria-label="Matrix value c" />
             </label>
             <label>
               <span>d</span>
-              <input id="matrixD" type="number" step="0.1" inputmode="decimal" aria-label="Matrix value d" />
+              <input id="matrixD" type="text" inputmode="text" autocomplete="off" aria-label="Matrix value d" />
             </label>
             <span class="matrix-bracket" aria-hidden="true">]</span>
           </div>
 
           <div class="preset-grid" aria-label="Matrix presets">
             <button type="button" data-matrix="identity">Identity</button>
-            <button type="button" data-matrix="rotate90">Rotate 90°</button>
-            <button type="button" data-matrix="rotate180">Rotate 180°</button>
-            <button type="button" data-matrix="rotate270">Rotate 270°</button>
+            <button type="button" data-matrix="rotate90">Rotate 90° ACW</button>
+            <button type="button" data-matrix="rotate180">Rotate 180° ACW</button>
+            <button type="button" data-matrix="rotate270">Rotate 270° ACW</button>
             <button type="button" data-matrix="flipH">Flip Horizontally</button>
             <button type="button" data-matrix="flipV">Flip Vertically</button>
             <button type="button" data-matrix="scaleUp">Scale Up</button>
