@@ -130,10 +130,10 @@ th {
   display: flex;
   align-items: end;
   justify-content: space-between;
-  gap: 1.5rem;
-  max-width: 1480px;
+  gap: 1rem;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 1.5rem clamp(1rem, 3vw, 2rem) 1rem;
+  padding: 1rem clamp(1rem, 2.4vw, 1.5rem) 0.75rem;
 }
 
 .app-header h1,
@@ -143,8 +143,8 @@ th {
 }
 
 .app-header h1 {
-  font-size: clamp(2rem, 5vw, 4rem);
-  line-height: 0.95;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  line-height: 1;
 }
 
 .eyebrow {
@@ -157,19 +157,19 @@ th {
 }
 
 .intro {
-  max-width: 55ch;
+  max-width: 58ch;
   margin: 0;
   color: var(--muted);
-  line-height: 1.5;
+  line-height: 1.42;
 }
 
 .app-shell {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 430px);
-  gap: 1rem;
-  max-width: 1480px;
+  grid-template-columns: minmax(460px, 0.92fr) minmax(600px, 1.08fr);
+  gap: 0.85rem;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 clamp(1rem, 3vw, 2rem) 2rem;
+  padding: 0 clamp(1rem, 2.4vw, 1.5rem) 1.25rem;
 }
 
 .plot-section,
@@ -181,8 +181,8 @@ th {
 
 .plot-section {
   display: grid;
-  grid-template-rows: auto minmax(360px, 1fr) auto;
-  min-height: min(72vh, 760px);
+  grid-template-rows: auto clamp(340px, 56vh, 520px) auto;
+  align-self: start;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -190,7 +190,7 @@ th {
 .plot-toolbar,
 .legend,
 .panel {
-  padding: 1rem;
+  padding: 0.85rem;
 }
 
 .plot-toolbar {
@@ -227,7 +227,7 @@ th {
 
 .canvas-wrap {
   position: relative;
-  min-height: 360px;
+  min-height: 340px;
   background: #fbfdff;
 }
 
@@ -235,7 +235,7 @@ th {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 360px;
+  min-height: 340px;
   touch-action: none;
 }
 
@@ -279,13 +279,15 @@ th {
 
 .controls {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.85rem;
   align-content: start;
 }
 
 .panel {
   display: grid;
-  gap: 0.9rem;
+  align-content: start;
+  gap: 0.72rem;
   border-radius: 8px;
 }
 
@@ -303,13 +305,17 @@ th {
 
 .point-form {
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: end;
   gap: 0.65rem;
 }
 
+.point-form button {
+  grid-column: 1 / -1;
+}
+
 .table-wrap {
-  max-height: 240px;
+  max-height: 186px;
   overflow: auto;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -388,7 +394,7 @@ th {
 
 .site-footer {
   grid-column: 1 / -1;
-  padding: 2px 0 4px;
+  padding: 0.15rem 0 0;
   color: var(--muted);
   font-size: 0.86rem;
   text-align: center;
@@ -396,9 +402,9 @@ th {
 
 .site-footer hr {
   height: 1px;
-  margin: 0 0 12px;
+  margin: 0 0 0.75rem;
   border: 0;
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--line);
 }
 
 .site-footer p {
@@ -406,7 +412,7 @@ th {
 }
 
 .site-footer a {
-  color: var(--cyan);
+  color: var(--accent);
   font-weight: 700;
   text-decoration: none;
 }
@@ -456,7 +462,7 @@ th {
   }
 
   .plot-section {
-    min-height: 620px;
+    grid-template-rows: auto minmax(420px, 1fr) auto;
   }
 
   .canvas-wrap,

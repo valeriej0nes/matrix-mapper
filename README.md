@@ -1,6 +1,6 @@
-# Matrix Plane Lab
+# Matrix Mapper
 
-Matrix Plane Lab is a static, responsive 2D linear algebra visualizer for exploring how editable `2x2` matrices transform user-created shapes on a Cartesian plane.
+A static, responsive 2D linear algebra visualizer for exploring how editable `2x2` matrices transform user-created shapes on a Cartesian plane.
 
 ## Features
 
